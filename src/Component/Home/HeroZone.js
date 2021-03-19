@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {GlobalStore} from "../GlobalStore";
+import {GlobalStore} from "../../GlobalStore";
 import {GrPlayFill} from 'react-icons/gr';
 import {AiOutlineInfoCircle} from 'react-icons/ai';
 
@@ -12,7 +12,8 @@ const HeroZone = () => {
             <div className={"herozone__movie__spec"}>
                 <h1>{state.homepageImage.original_title}</h1>
                 <p>{state.homepageImage.overview}</p>
-                <div className={"herozone__btn"}>
+
+                <section className={"herozone__btn"}>
                     <button className={"herozone__btn-lecture"}>
                         <GrPlayFill />
                         <span>Lecture</span>
@@ -21,9 +22,10 @@ const HeroZone = () => {
                         <AiOutlineInfoCircle />
                         <span>Plus d'infos</span>
                     </button>
-                </div>
+                </section>
+
             </div>
-            <img className={"herozone__image"} src={"https://image.tmdb.org/t/p/original" + state.homepageImage.backdrop_path}/>
+            <img className={"herozone__image"} alt={state.homepageImage.title} src={"https://image.tmdb.org/t/p/original" + state.homepageImage.backdrop_path}/>
             <div className={"herozone__image__gradiant"}/>
         </div> : "searching ...";
 

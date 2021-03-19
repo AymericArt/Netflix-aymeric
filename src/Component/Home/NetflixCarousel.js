@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BaseApiFetch from "../utils/BaseApiFetch";
+import BaseApiFetch from "../../utils/BaseApiFetch";
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import Slider from "react-slick";
 
@@ -27,20 +27,22 @@ const NetflixCarousel = (props) => {
         speed: 500,
     };
 
+    const returnIfImageExist = (item, index) => {
+        if (item.backdrop_path) {
+            return (
+                <div key={index} className={"netflix__carousel"}>
+                    <img className={"netflix__carousel__image"} src={"https://image.tmdb.org/t/p/w500/" + item.backdrop_path} alt={item.title}/>
+                </div>
+            );
+        }
+    }
+
     return (
         <div>
             <h2>{props.props.name}</h2>
-
-                <Slider {...settings}>
-                    {MovieList.map((item, index) => {
-                        return (
-                            <div key={index} className={"netflix__carousel"}>
-                                <img className={"netflix__carousel__image"} src={"https://image.tmdb.org/t/p/w500/" + item.backdrop_path}/>
-                            </div>
-                        )
-                    })}
-                </Slider>
-
+            <Slider {...settings}>
+                {MovieList.map((item, index) => returnIfImageExist(item, index) )}
+            </Slider>
         </div>
     );
 }

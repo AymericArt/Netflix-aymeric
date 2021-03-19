@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from "react";
-import BaseApiFetch from "../utils/BaseApiFetch";
+import BaseApiFetch from "../../utils/BaseApiFetch";
 import NetflixCarousel from "./NetflixCarousel";
 import HeroZone from "./HeroZone";
-import {FETCH_CATEGORIES, FETCH_HOMEPAGE} from '../actions/actionType'
-import {GlobalStore} from "../GlobalStore";
+import {FETCH_CATEGORIES, FETCH_HOMEPAGE} from '../../actions/actionType'
+import {GlobalStore} from "../../GlobalStore";
 
 const Home = (props) => {
 

@@ -3,7 +3,6 @@ import '../../assets/home.css'
 
 const Footer = () => {
 
-
     return (
         <div role="contentinfo" className="member-footer">
             <ul className="member-footer-links">

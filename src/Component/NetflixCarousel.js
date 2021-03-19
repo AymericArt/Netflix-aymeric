@@ -23,8 +23,8 @@ const NetflixCarousel = (props) => {
         infinite: true,
         lazyLoad: true,
         centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500
+        slidesToShow: 4,
+        speed: 500,
     };
 
     return (
@@ -35,7 +35,7 @@ const NetflixCarousel = (props) => {
                     {MovieList.map((item, index) => {
                         return (
                             <div key={index} className={"netflix__carousel"}>
-                                <img src={"https://image.tmdb.org/t/p/w500/" + item.backdrop_path}/>
+                                <img className={"netflix__carousel__image"} src={"https://image.tmdb.org/t/p/w500/" + item.backdrop_path}/>
                             </div>
                         )
                     })}

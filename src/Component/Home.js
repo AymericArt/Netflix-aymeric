@@ -15,12 +15,20 @@ const Home = (props) => {
     }, []);
 
     const fetchHomepage = () => {
-        BaseApiFetch("/movie/57201")
-            .then(res => dispatch({type: FETCH_HOMEPAGE, payload: res.data}) )
+
+        /**
+         * The catch error function has been moved to the method BaseApiFetch
+         */
+        BaseApiFetch("/movie/512200")
+            .then(res => dispatch({type: FETCH_HOMEPAGE, payload: res.data}))
         ;
     }
 
     const fetchCategories = () => {
+
+        /**
+         * The catch error function has been moved to the method BaseApiFetch
+         */
         BaseApiFetch("genre/movie/list")
             .then(res =>  dispatch({type: FETCH_CATEGORIES, payload: res.data}))
         ;
@@ -28,15 +36,13 @@ const Home = (props) => {
 
     const categories = (state && state.categories) ? state.categories.genres.map( (item, index) => {
         return <NetflixCarousel props={item} key={index} />
-    }) : 'null';
+    }) : 'Loading ...';
 
 
     return (
         <div className={"container"}>
             <HeroZone />
-            <div className={"home__container"}>
-                {categories}
-            </div>
+            <div className={"home__container"}>{categories}</div>
         </div>
     );
 }

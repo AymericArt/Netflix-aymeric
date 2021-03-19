@@ -1,0 +1,236 @@
+body {
+    background-color: #141414;
+    color: white;
+}
+
+.navbar {
+    transition: 250ms;
+    z-index: 999;
+    top: 0;
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    color: white;
+    padding: 5px 60px ;
+}
+
+.navbar__netflix-list {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar__netflix-list ul {
+    list-style: none;
+}
+
+.navbar__netflix-list a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.navbar__netflix-logo {
+    width: 7rem;
+}
+
+.navbar__netflix-list__ancre {
+    display: flex;
+}
+
+.navbar__netflix-list__ancre li {
+    margin-right: 1rem;
+}
+
+.home__container {
+    padding: 1rem 60px;
+}
+.netflix__carousel img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.herozone {
+    height: 85vh;
+    width: 100%;
+    background: rgb(20,20,20);
+}
+
+.herozone__image {
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 100%;
+}
+
+.herozone__movie__spec {
+    position: absolute;
+    bottom: 35%;
+    padding: 0 60px;
+    width: 600px;
+    text-overflow: ellipsis;
+}
+
+.herozone__movie__spec p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.herozone__btn {
+    display: flex;
+}
+
+.herozone__btn span {
+    padding: 0 1rem ;
+}
+
+.herozone__btn svg {
+    font-size: 18px;
+}
+
+.herozone__btn button {
+    transition: 400ms;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    padding: 0.8rem;
+    position: relative;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+}
+
+.herozone__btn button:hover {
+    transition: 400ms;
+    opacity: 0.8;
+}
+
+.herozone__btn-infos {
+    background-color: rgba(109, 109, 110, 0.4);
+    color: white;
+}
+
+.herozone__btn-lecture {
+    background-color: white;
+    color: black;
+}
+
+/*.slick-slide {*/
+/*    padding: 5px;*/
+/*    margin: 5px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+.slick-slide {
+    /*padding: 10px 5px 10px 0px;*/
+}
+
+.netflix__carousel__image {
+    border-radius: 10px;
+    border: 10px solid #141414;
+}
+
+.slick-arrow slick-prev {
+    height: 20px;
+}
+
+.herozone__image__gradiant {
+    width: 100%;
+    position: absolute;
+    top: 83vh;
+    height: 25px;
+    background: #141414;
+    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,1) 2%, rgba(0,190,228,0) 100%);
+}
+
+.slick-prev {
+    left: 16px;
+    position: absolute;
+    z-index: 888;
+}
+
+.slick-slide:hover {
+    transition: 200ms;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.slick-slide {
+    transition: 200ms;
+}
+
+.slick-next {
+    right: 16px;
+    position: absolute;
+    z-index: 888;
+}
+
+.member-footer {
+    display: flex;
+    padding: 10px 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.member-footer-links li{
+    list-style: none;
+}
+.member-footer-links a{
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+}
+
+.member-footer-link-wrapper{
+    margin: 1rem;
+}
+
+.service-code:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.member-footer .service-code {
+    margin-bottom: 20px;
+    font-size: 13px;
+    padding: .5em;
+}
+
+.service-code {
+    background: 0 0;
+    color: grey;
+    border: solid 1px grey;
+    font-size: 1.3rem;
+    padding: .5rem;
+    margin-bottom: 0;
+}
+
+.member-footer-copyright, .member-footer-service  {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.member-footer .service-code {
+    margin: 0;
+}
